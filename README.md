@@ -1,10 +1,12 @@
 ```markdown
 # Odin PEG Engine
 
-A fast, dynamically compiled Parsing Expression Grammar (PEG) engine written in Odin. It strictly handles **Syntax**—acting as a scannerless, unambiguous parser that reads text and generates a structured, labeled Abstract Syntax Tree (AST) using a virtual memory arena.
+A fast, dynamically compiled Parsing Expression Grammar (PEG) engine written in Odin.
+It strictly handles **Syntax**—acting as a scannerless,
+unambiguous parser that reads text and generates a structured,
+labeled Abstract Syntax Tree (AST) using a virtual memory arena.
 
 ## Project Structure
-
 ```text
 peg_engine/
  ├── core.odin         # Core VM, Context, and recursive evaluation loop
@@ -13,7 +15,6 @@ peg_engine/
  │    └── builder.odin # Meta-compiler (turns grammar strings into runnable engines)
  └── tests/
       └── main.odin    # Implementation tests
-
 ```
 
 ## Grammar Syntax
@@ -59,9 +60,4 @@ If the engine parses `x = 500`, it generates this labeled tree structure in memo
 [AssignExpr]
  ├── target: [Variable] "x"
  └── value:  [Integer] "500"
-
-```
-
-```
-
 ```
